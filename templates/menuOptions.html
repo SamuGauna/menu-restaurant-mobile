@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú del Restaurante</title>
+    <link rel="stylesheet" href="../static/css/menu.css">
+</head>
+<body class="{{ruta_actual}}">
+    <h1>Menú del Restaurante</h1>
+        {% for plate in menu %}
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <p>{{ plate['name'] }}</p>
+                    <p>$ {{ plate['price'] }}</p>
+                </div>
+                <div class="card-back">
+                    <p>{{ plate['description'] }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+</body>
+</html>

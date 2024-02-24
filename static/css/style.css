@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(../../static/img/view_general.jpg);
+    background-size: cover;
+}
+.buttonsContainer{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+/* RESTAURANT TITLE */
+.focus-in-contract-bck {
+    font-style: italic;
+    font-size: 30px;
+    font-weight: bold;
+	-webkit-animation: focus-in-contract-bck 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: focus-in-contract-bck 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes focus-in-contract-bck {
+    0% {
+        letter-spacing: 1em;
+        -webkit-transform: translateZ(300px);
+                transform: translateZ(300px);
+        -webkit-filter: blur(12px);
+                filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateZ(12px);
+                transform: translateZ(12px);
+        -webkit-filter: blur(0);
+                filter: blur(0);
+        opacity: 1;
+    }
+}
+@keyframes focus-in-contract-bck {
+    0% {
+        letter-spacing: 1em;
+        -webkit-transform: translateZ(300px);
+                transform: translateZ(300px);
+        -webkit-filter: blur(12px);
+                filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateZ(12px);
+                transform: translateZ(12px);
+        -webkit-filter: blur(0);
+                filter: blur(0);
+        opacity: 1;
+    }
+}
+/* STYLE BUTTON */
+button {
+    background-color: transparent;
+    border: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
+    width: 10em;
+    border-radius: 1rem;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0.4rem #dfd9d9;
+    cursor: pointer;
+    margin: 10px;
+}
+button:active {
+    color: white;
+    box-shadow: 0 0.2rem #dfd9d9;
+    transform: translateY(0.2rem);
+}
+button:hover:not(:disabled) {
+    background: rgb(168, 162, 150, 0.1);
+    color: rgb(5, 5, 5);
+    text-shadow: 0 0.1rem #bcb4b4;
+}
+button:disabled {
+    cursor: auto;
+    color: grey;
+}
+/* STYLE STARS OPINION  */
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.3rem;
+    --stroke: #ffffff;
+    --fill: #ffc73a;
+}
+.rating input {
+    appearance: unset;
+}
+.rating label {
+    cursor: pointer;
+}
+.rating svg {
+    width: 2rem;
+    height: 2rem;
+    overflow: visible;
+    fill: transparent;
+    stroke: var(--stroke);
+    stroke-linejoin: bevel;
+    stroke-dasharray: 12;
+    animation: idle 4s linear infinite;
+    transition: stroke 0.2s, fill 0.5s;
+}
+@keyframes idle {
+    from {
+    stroke-dashoffset: 24;
+    }
+}
+.rating label:hover svg {
+    stroke: var(--fill);
+}
+.rating input:checked ~ label svg {
+    transition: 0s;
+    animation: idle 4s linear infinite, yippee 0.75s backwards;
+    fill: var(--fill);
+    stroke: var(--fill);
+    stroke-opacity: 0;
+    stroke-dasharray: 0;
+    stroke-linejoin: miter;
+    stroke-width: 8px;
+}
+@keyframes yippee {
+    0% {
+        transform: scale(1);
+        fill: var(--fill);
+        fill-opacity: 0;
+        stroke-opacity: 1;
+        stroke: var(--stroke);
+        stroke-dasharray: 10;
+        stroke-width: 1px;
+        stroke-linejoin: bevel;
+    }
+    30% {
+        transform: scale(0);
+        fill: var(--fill);
+        fill-opacity: 0;
+        stroke-opacity: 1;
+        stroke: var(--stroke);
+        stroke-dasharray: 10;
+        stroke-width: 1px;
+        stroke-linejoin: bevel;
+    }
+    30.1% {
+        stroke: var(--fill);
+        stroke-dasharray: 0;
+        stroke-linejoin: miter;
+        stroke-width: 8px;
+    }
+    60% {
+        transform: scale(1.2);
+        fill: var(--fill);
+    }
+}
+.footer{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.footer-title{
+    margin-bottom: 15px;
+}
+/* MEDIA QUERIES PARA SCREEN CELULAR */
+@media screen and (max-width: 1024px){
+
+}
+@media screen and (max-width: 768px){
+
+}
+@media screen and (max-width: 640px){
+
+}

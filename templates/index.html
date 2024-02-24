@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
     <nav></nav>
@@ -12,15 +12,19 @@
     
     <h1 class="focus-in-contract-bck">Family Burguer</h1>
     <ul class="buttonsContainer">
-            <button>Pastas</button>
-            <button>Pizzas</button>
+            <a href="/pasta">
+                <button>Pastas</button>
+            </a>
+            <a href="/pizza">
+                <button>Pizzas</button>
+            </a>
             <button>Hamburguesas</button>
             <button>Papas Fritas</button>
             <button>Picadas</button>
             <button>Bebidas</button>
     </ul>
-    <footer>
-        <h4>Dejanos tu opinion</h4>
+    <footer class="footer">
+        <h4 class="footer-title">Dejanos tu opinión</h4>
         <div class="rating">
             <input type="radio" id="star-1" name="star-radio" value="star-1">
             <label for="star-1">
