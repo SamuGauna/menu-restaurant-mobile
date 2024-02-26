@@ -13,18 +13,24 @@ body{
 .pasta{
     background-image: url(../../static/img/pastas.jpg);
     background-size: cover;
+    height: 100vh;
 }
 .burguer{
     background-image: url(../../static/img/burguer.jpg);
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 .papas{
     background-image: url(../../static/img/papas.jpg);
     background-size: cover;
+    height: 100vh;
 }
 .picada{
     background-image: url(../../static/img/picada.jpg);
     background-size: cover;
+    height: 100vh;
 }
 .bebida{
     background-image: url(../../static/img/drink.jpg);
@@ -40,6 +46,7 @@ body{
     height: 150px;
     margin-top: 10px;
     margin-bottom: 10px;
+
 }
 .card-inner {
     width: 100%;
@@ -47,6 +54,9 @@ body{
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.999s;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 .card:hover .card-inner {
     transform: rotateY(180deg);
@@ -59,22 +69,23 @@ body{
     backface-visibility: hidden;
 }
 .card-front {
-    background-color: rgb(106, 44, 112, 0.5);
+    background-color: rgb(106, 44, 112, 0.2);
     color: #fff;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    border: 3px solid #6A2C70;
+    border: 3px solid hwb(0 61% 39%);
     border-radius: 10px;
     justify-content: center;
     font-size: 15px;
     transform: rotateY(0deg);
 }
 .card-back {
-    background-color: rgb(106, 44, 112, 0.5);
+    background-color: rgb(106, 44, 112, 0.2);
     color: #fff;
     display: flex;
     align-items: center;
-    border: 3px solid #6A2C70;
+    border: 3px solid hwb(0 61% 39%);
     border-radius: 10px;
     justify-content: center;
     font-size: 15px;
